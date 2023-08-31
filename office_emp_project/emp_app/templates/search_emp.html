@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter employee details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">"
+
+</head>
+<body>
+    <div class="container">
+        <h1>filter employee details</h1>
+        <hr>  
+        <form action="/search_emp" method="post">
+            {% csrf_token %}
+            <fieldset>
+                
+              <div class="mb-3">
+                <label for="name">Employee first_or_last_name</label><br>
+                <input type="text" id="name"  name="name" value="{{name}}"> <br>
+
+
+                <label for="department">department</label><br>
+                <input type="text" id="department"  name="department" value="{{department}}" > <br>
+
+               
+                <label for="role">role</label><br>
+                <input type="text" id="role"  name="role" value="{{role}}"> <br>
+                <hr>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+          </form>
+
+    </div>
+</body>
+</html>
